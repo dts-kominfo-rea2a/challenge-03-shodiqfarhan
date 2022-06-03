@@ -32,10 +32,11 @@ const listBelanjaan = function (data) {
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
 const totalBelanjaan = function (data) {
   let arrTotal = [];
+  let total = null;
   for (let i = 0; i < data.length; i++) {
     arrTotal.push(data[i].harga * data[i].kuantitas);
+    total += arrTotal[i];
   }
-  let total = arrTotal[0] + arrTotal[1] + arrTotal[2];
   return total;
 };
 
